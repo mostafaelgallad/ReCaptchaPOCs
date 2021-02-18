@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="main-block">
+    <h1>Registration</h1>
+    <form action="/Home/Verify" id="demo-form">
+        <hr>
+        <div class="account-type">
+            <input type="radio" value="none" id="radioOne" name="account" checked />
+            <label for="radioOne" class="radio">Personal</label>
+            <input type="radio" value="none" id="radioTwo" name="account" />
+            <label for="radioTwo" class="radio">Company</label>
+        </div>
+        <hr>
+        <label id="icon" for="Email"><i class="fas fa-envelope"></i></label>
+        <input type="text" name="Email" id="Email" placeholder="Email" required />
+        <label id="icon" for="name"><i class="fas fa-user"></i></label>
+        <input type="text" name="Name" id="name" placeholder="Name" required />
+        <label id="icon" for="password"><i class="fas fa-unlock-alt"></i></label>
+        <input type="password" name="Password" id="password" placeholder="Password" required />
+        <hr>
+        <div class="gender">
+            <input type="radio" value="none" id="male" name="gender" checked />
+            <label for="male" class="radio">Male</label>
+            <input type="radio" value="none" id="female" name="gender" />
+            <label for="female" class="radio">Female</label>
+        </div>
+        <input type="text" id="inputReCAPTCHAToken" name="inputReCAPTCHAToken" value=""/>
+        <hr>
+        <div class="btn-block">
+            <button class="g-recaptcha"
+                    data-sitekey="6Ld58VgaAAAAAPIVUdwVGX1hXJyTEhXeU6_-lSvk"
+                    data-callback='onSubmit'
+                    data-action='submit'>
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
