@@ -33,10 +33,7 @@
         <input type="text" id="inputReCAPTCHAToken" name="inputReCAPTCHAToken" value=""/>
         <hr>
         <div class="btn-block">
-            <button class="g-recaptcha"
-                    data-sitekey="6Ld58VgaAAAAAPIVUdwVGX1hXJyTEhXeU6_-lSvk"
-                    data-callback='onSubmit'
-                    data-action='submit'>
+            <button id="fire" type="submit" onclick="onSubmit(event)">
                 Submit
             </button>
         </div>
